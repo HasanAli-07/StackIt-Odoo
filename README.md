@@ -2,6 +2,8 @@
 
 A modern Q&A platform built with React, TypeScript, Node.js, and SQLite.
 
+Video link:https://drive.google.com/file/d/1oSRApNd-RLGj59ULeK24l-W3CPLRmqT_/view?usp=drive_link
+
 ## Features
 
 - User authentication and authorization
