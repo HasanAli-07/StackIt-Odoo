@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 hover:bg-gray-300;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-transparent hover:bg-gray-50;
+  }
+  
+  .btn-sm {
+    @apply h-8 px-3 text-xs;
+  }
+  
+  .btn-md {
+    @apply h-10 px-4 py-2;
+  }
+  
+  .btn-lg {
+    @apply h-12 px-8;
+  }
+  
+  .card {
+    @apply rounded-lg border border-gray-200 bg-white shadow-sm;
+  }
+  
+  .input {
+    @apply flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .textarea {
+    @apply flex min-h-[80px] w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+}
+
+/* TipTap Editor Styles */
+.ProseMirror {
+  @apply outline-none min-h-[200px] p-4;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror h1 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.ProseMirror h2 {
+  @apply text-xl font-bold mb-3;
+}
+
+.ProseMirror h3 {
+  @apply text-lg font-bold mb-2;
+}
+
+.ProseMirror ul {
+  @apply list-disc list-inside mb-4;
+}
+
+.ProseMirror ol {
+  @apply list-decimal list-inside mb-4;
+}
+
+.ProseMirror li {
+  @apply mb-1;
+}
+
+.ProseMirror blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.ProseMirror code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.ProseMirror pre {
+  @apply bg-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+.ProseMirror pre code {
+  @apply bg-transparent p-0;
+}
+
+.ProseMirror a {
+  @apply text-primary-600 hover:underline;
+}
+
+.ProseMirror img {
+  @apply max-w-full h-auto rounded;
+}
+
+/* Editor Toolbar */
+.editor-toolbar {
+  @apply flex flex-wrap gap-1 p-2 border-b border-gray-200 bg-gray-50;
+}
+
+.toolbar-button {
+  @apply p-2 rounded hover:bg-gray-200 transition-colors;
+}
+
+.toolbar-button.active {
+  @apply bg-primary-100 text-primary-700;
+}
+
+/* Vote buttons */
+.vote-button {
+  @apply flex flex-col items-center p-2 rounded hover:bg-gray-100 transition-colors;
+}
+
+.vote-button.active {
+  @apply text-primary-600;
+}
+
+.vote-button.upvote.active {
+  @apply text-green-600;
+}
+
+.vote-button.downvote.active {
+  @apply text-red-600;
+}
+
+/* Notification badge */
+.notification-badge {
+  @apply absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply animate-spin rounded-full h-4 w-4 border-2 border-gray-300 border-t-primary-600;
+}
+
+/* Fade animations */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+} 

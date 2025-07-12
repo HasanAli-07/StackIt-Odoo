@@ -1,0 +1,27 @@
+{
+  "name": "stackit",
+  "version": "1.0.0",
+  "description": "A minimal Q&A forum platform",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "qa",
+    "forum",
+    "stackoverflow",
+    "questions",
+    "answers"
+  ],
+  "author": "StackIt Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/sanitize-html": "^2.16.0",
+    "concurrently": "^8.2.2"
+  }
+}

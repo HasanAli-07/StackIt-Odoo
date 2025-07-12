@@ -1,0 +1,6 @@
+@echo off
+echo Stopping server...
+taskkill /f /im node.exe 2>nul
+echo.
+echo Starting server...
+npm run dev 
